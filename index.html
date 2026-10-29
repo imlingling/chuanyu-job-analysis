@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>川渝大数据岗位市场洞察 · 数据分析作品集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dracula.min.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===================== 侧边导航 ===================== -->
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo">川</div>
+    <div>
+      <div class="name">川渝岗位洞察</div>
+      <div class="sub">DATA · PORTFOLIO</div>
+    </div>
+  </div>
+  <nav class="nav">
+    <a class="nav-link active" href="#overview"><span class="idx">01</span>项目概述</a>
+    <a class="nav-link" href="#collect"><span class="idx">02</span>采集方案</a>
+    <a class="nav-link" href="#clean"><span class="idx">03</span>清洗与EDA</a>
+    <a class="nav-link" href="#dashboard"><span class="idx">04</span>可视化看板</a>
+    <a class="nav-link" href="#conclusion"><span class="idx">05</span>业务结论</a>
+  </nav>
+  <div class="sb-foot">© 2026 · 高职大数据技术专业<br/>求职作品集 · 多源异构分析</div>
+</aside>
+
+<!-- ===================== 主内容 ===================== -->
+<div class="main">
+
+  <!-- 01 项目概述 / Hero + KPI -->
+  <section class="hero" id="overview">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-inner">
+      <div class="eyebrow">SICHUAN · CHONGQING · BIG-DATA JOBS</div>
+      <h1>川渝大数据岗位<br/><span class="grad">市场洞察与求职决策</span></h1>
+      <p class="lead">在成渝双城经济圈与"十五五"数字经济建设的背景下，用 <b>5328</b> 条多源异构真实招聘数据，
+        为专科大数据专业学生拆解"学历机会、城市选择、技能方向、薪资预期"四大求职痛点。</p>
+      <div class="chips">
+        <span class="chip"># 多源异构</span>
+        <span class="chip"># 合规爬虫</span>
+        <span class="chip"># Pandas 清洗</span>
+        <span class="chip"># ECharts 看板</span>
+        <span class="chip"># 双城经济圈</span>
+      </div>
+    </div>
+    <div class="scroll-hint">↓ SCROLL · 向下探索数据</div>
+  </section>
+
+  <section class="section">
+    <div class="section-head reveal">
+      <span class="section-tag">CORE METRICS</span>
+      <h2 class="section-title">核心数据 <span class="accent">KPI 大屏</span></h2>
+      <p class="section-desc">所有指标均来自真实采集与清洗结果，非抽样估算。</p>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi reveal d1"><div class="num">5328</div><div class="label">底座数据量</div><div class="sub">政府附件 + 公共招聘网</div></div>
+      <div class="kpi reveal d2"><div class="num">425</div><div class="label">核心分析集</div><div class="sub">体制内 150 + 市场化 275</div></div>
+      <div class="kpi reveal d3"><div class="num">35<span class="unit">%</span></div><div class="label">体制内岗位占比</div><div class="sub">事业单位统考为主</div></div>
+      <div class="kpi reveal d4"><div class="num" style="font-size:30px">计算机<br/>软件</div><div class="label">最高频技能</div><div class="sub">网络 / 通信紧随其后</div></div>
+    </div>
+
+    <div class="glass reveal" style="margin-top:22px">
+      <h3>项目背景与数据底座</h3>
+      <p class="muted">在成渝地区双城经济圈建设纵深推进、国家"十五五"规划将"数字经济""人工智能+"列为支柱产业培育方向的背景下，
+        川渝对大数据人才的吸纳能力快速上升。然而，作为<b style="color:var(--cyan)">专科层次大数据技术专业</b>的应届生，
+        普遍面临"学历门槛高、技能要求模糊、城市选择盲目"三大求职痛点。</p>
+      <p class="muted" style="margin-top:10px">本项目以<b style="color:var(--cyan)">多源异构真实数据</b>为支撑，构建一条从采集到结论的完整分析链路，
+        目标是用<b style="color:var(--cyan)">可溯源的数据事实</b>回答一个具体问题：专科生在川渝大数据岗位上，到底有没有机会、机会在哪、该学什么、该去哪。</p>
+      <ul class="muted" style="margin:12px 0 0 18px">
+        <li><b style="color:var(--cyan)">全量清洗集 5328 条</b>：由 150 条体制内政府真实岗位 + 5178 条市场化真实在招岗位合并、去重、清洗而成，构成川渝公共就业市场的体量基准。</li>
+        <li><b style="color:var(--cyan)">深度分析核心集 425 条</b>：在上述底座中，筛出与"大数据 / 数据分析 / 数据开发 / 软件 / 计算机"强相关的岗位（体制内 150 + 市场化 275），作为所有图表与结论的直接对象。</li>
+      </ul>
+      <div class="value-note"><b>设计哲学：</b>把"数据量大"与"结论可信"解耦——5328 条证明工程化处理能力，425 条核心集保证主题聚焦、结论不注水。</div>
+    </div>
+
+    <!-- 数据流转图（来自旧报告） -->
+    <div class="glass flow-card reveal" style="margin-top:20px">
+      <div class="ct">数据流转图 · Data Pipeline</div>
+      <div class="cs">采集 → 清洗 → 探索性分析 → 结论，一条可溯源的方法学链路</div>
+      <div class="mermaid">
+flowchart TD
+    subgraph S1[① 数据采集层]
+        A1["体制内真实附件<br/>川渝人社局公开岗位表 · 150 条<br/>(可溯源政府官网)"]
+        A2["市场化真实在招<br/>中国公共招聘网 · 5785 条<br/>(人社部国家级平台 / 合规采集)"]
+    end
+    subgraph S2[② 数据清洗层]
+        B1["薪资归一<br/>各类表述 → 月薪(元) 数值化"]
+        B2["学历映射<br/>大专 / 本科 / 硕士 / 博士 / 不限"]
+        B3["去重 + 关键词标签<br/>岗位名+公司+城市 去重"]
+    end
+    subgraph S3[③ 探索性分析 EDA]
+        C1["图表1 · 学历门槛柱状图"]
+        C2["图表2 · 城市需求分布图"]
+        C3["图表3 · 技能词云图"]
+        C4["图表4 · 薪资分布直方图"]
+    end
+    subgraph S4[④ 结论输出层]
+        D1["4 条专科生落地求职建议"]
+    end
+    S1 --> S2 --> S3 --> S4
+    A1 -.->|合并| S2
+    A2 -.->|合并| S2
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 采集方案 -->
+  <section class="section" id="collect">
+    <div class="section-head reveal">
+      <span class="section-tag">DATA COLLECTION</span>
+      <h2 class="section-title">采集 <span class="accent">方案</span></h2>
+      <p class="section-desc">数据源坚持"公开、合规、可溯源"三原则，杜绝任何越权或高并发抓取。</p>
+    </div>
+
+    <div class="callout reveal">
+      <b>数据甄别实证：</b>立项早期曾评估天池（Tianchi）公开招聘数据集（5000 条），其各维度分布均匀得不符合真实市场规律
+      （5 档学历各约 20%、15 城每城约 330 条、6 类岗位各约 800 条），提示极可能为<b>模拟 / 合成数据</b>。
+      <b>结论：弃用该数据集</b>，仅作 Pipeline 方法学验证，真实结论一律由下方两类可溯源数据支撑——这一取舍本身就是数据分析师最核心的素养：来源甄别与结论边界意识。
+    </div>
+
+    <div class="src-grid" style="margin-top:20px">
+      <div class="glass src-card reveal">
+        <div class="tag">SOURCE 01 · 体制内真实附件</div>
+        <h4>政府公开岗位表（核心结论支撑）</h4>
+        <ul>
+          <li>来源：四川省人社厅人事考试专栏、重庆市人社局官网等公开发布的《事业单位公开招聘岗位条件一览表》。</li>
+          <li>体量：150 条（四川 75 / 重庆 75），<b style="color:var(--cyan)">每条可溯源到政府官网原文</b>。</li>
+          <li>特点：学历、专业要求字段权威；薪资为"按政策执行（未公开）"，体制内不做薪资量化（严谨性，非缺失）。</li>
+        </ul>
+      </div>
+      <div class="glass src-card reveal d1">
+        <div class="tag">SOURCE 02 · 市场化真实在招</div>
+        <h4>中国公共招聘网（job.mohrss.gov.cn）</h4>
+        <ul>
+          <li>来源：人力资源和社会保障部国家级公共就业平台，川渝两省市全部在招页面。</li>
+          <li>合规采集：纯 requests 读取列表页内嵌岗位 JSON（无需 Playwright / 抓包）；<b style="color:var(--cyan)">并发 = 1、单请求随机间隔 3–5 秒</b>、5xx/429 自动退避、主动剔除联系人 / 电话 / 地址等个人信息。</li>
+          <li>体量：四川 3945 + 重庆 1840 = <b style="color:var(--cyan)">5785 条</b>去重真实在招岗位。</li>
+          <li>诚实约束：该站为综合公共就业平台，纯大数据 / IT 岗约占 5.2%，故 5328 条用作体量基准，425 条核心集作深度分析。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="glass reveal" style="margin-top:20px">
+      <h3>核心代码 · 爬虫合规与限速逻辑</h3>
+      <p class="muted" style="font-size:13px">以下代码为项目真实实现，严格遵循 robots.txt 与反爬限速规范，体现工程合规意识。</p>
+      <div class="code-wrap">
+        <div class="code-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="fname">scrape_mohrss_chuanyu.py</span>
+          <span class="lang">PYTHON</span>
+        </div>
+<pre><code class="language-python"># 省级行政区码（用省级码才能拿到全省深度分页，城市码量太小）
+REGIONS = {"510000": "四川省", "500000": "重庆市"}
+PII_FIELDS = {"aae004", "aae005", "aae006"}   # 联系人/电话/地址，坚决不采集
+
+def fetch_page(region_code, page, session):
+    # 列表页把岗位数据内嵌在 &lt;input id="findjoblist"&gt; 的 JSON 里，直接解析即可，无需抓包/无头浏览器
+    params = {"pageNo": page, "orderType": "score", "AREA": region_code}
+    for attempt in range(1, MAX_RETRY + 1):
+        try:
+            r = session.get(BASE, params=params, headers=HEADERS, timeout=30)
+            if r.status_code == 200:
+                return r.text
+            if r.status_code in (429, 500, 502, 503, 504):
+                wait = 2 ** attempt * 3          # 指数退避，不暴力重试
+                time.sleep(wait)
+                continue
+            return None
+        except Exception as e:
+            time.sleep(2 ** attempt * 3)
+
+def parse_findjoblist(html_text):
+    m = re.search(r'id="findjoblist"[^&gt;]*value="([^"]*)"', html_text or "")
+    return json.loads(html.unescape(m.group(1))) if m else []
+
+def map_record(r):
+    # 剔除个人信息：aae004(联系人)/aae005(电话)/aae006(地址) 不入库
+    return {
+        "job_title":  (r.get("aca112") or "").strip(),   # 岗位名
+        "company":    (r.get("aab004") or "").strip(),   # 公司
+        "city":       (r.get("aab302") or "").strip(),   # 城市
+        "salary_min": int(r.get("acb241") or 0),         # 薪资下限(元/月)
+        "salary_max": int(r.get("acb242") or 0),         # 薪资上限(元/月)
+    }
+
+# 合规限速：并发 = 1，每页请求后随机 sleep 3~5 秒
+time.sleep(random.uniform(DELAY_MIN, DELAY_MAX))</code></pre>
+      </div>
+    </div>
+
+    <div class="glass reveal" style="margin-top:20px">
+      <h3>核心代码 · Pandas 薪资与学历清洗逻辑</h3>
+      <p class="muted" style="font-size:13px">以下代码为项目真实实现，将非标准薪资表述与学历字段归一化为可分析的数值维度，体现从原始数据到可建模特征的全链路处理能力。</p>
+      <div class="code-wrap">
+        <div class="code-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="fname">merge_clean_eda.py</span>
+          <span class="lang">PYTHON</span>
+        </div>
+<pre><code class="language-python"># 薪资标准化：政府岗=未公开(统考)；市场化岗= acb241/242 数值(元/月)
+def fmt_salary(mn, mx):
+    mn = float(mn) if mn not in (None, "", "nan") else None
+    mx = float(mx) if mx not in (None, "", "nan") else None
+    if mn and mx:   return f"{int(mn)}-{int(mx)}"
+    if mn:          return f"{int(mn)}以上"
+    if mx:          return f"≤{int(mx)}"
+    return "未公开"
+
+# 学历归一：市场化岗无结构化字段，从 JD 文本启发式抽取；政府岗直接采用权威字段
+def derive_edu(text):
+    t = text or ""
+    if "博士" in t:                       return "博士"
+    if "硕士" in t or "研究生" in t:       return "硕士"
+    if "本科" in t:                       return "本科"
+    if "大专" in t or "专科" in t:        return "大专"
+    if "学历不限" in t or "不限学历" in t:  return "不限"
+    return "其他"
+
+# 去重 + 关键词标签，标记出 425 条大数据/IT 核心集
+df = pd.concat([gov, mkt], ignore_index=True)
+df = df.drop_duplicates(subset=["岗位名", "公司", "城市", "来源站点"])
+df["大数据相关"] = df.apply(is_bigdata, axis=1)</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 清洗与EDA -->
+  <section class="section" id="clean">
+    <div class="section-head reveal">
+      <span class="section-tag">CLEAN & EDA</span>
+      <h2 class="section-title">清洗与 <span class="accent">EDA</span></h2>
+      <p class="section-desc">原始字段杂乱（"8k-15k"、"面议"、"大专/专科"混写），需用 Pandas 做结构化归一。</p>
+    </div>
+    <div class="glass reveal">
+      <h3>预处理与清洗流程</h3>
+      <table class="clean-table">
+        <thead><tr><th>步骤</th><th>操作</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>薪资归一</td><td>多源表述 → 统一月薪(元) 数值化</td><td><code>8k-15k</code>、<code>1.5万-2万/月</code>、<code>10-15万/年</code> 均折算为下限 / 上限数值，便于直方图分析</td></tr>
+          <tr><td>学历映射</td><td>归一为 大专/本科/硕士/博士/不限</td><td>市场化岗无结构化学历字段，由 JD 文本启发式抽取；政府岗直接采用权威字段</td></tr>
+          <tr><td>经验抽取</td><td>正则抽取 N-M 年 区间</td><td>JD 文本启发式抽取</td></tr>
+          <tr><td>技能抽取</td><td>JD + 岗位名分词</td><td>生成技能标签，供词云使用（政府岗保留专业代码，溯源感强）</td></tr>
+          <tr><td>去重</td><td>按 (岗位名, 公司, 城市)</td><td>跨页 / 跨源重复合并</td></tr>
+          <tr><td>关键词标签</td><td>大数据/数据分析/数据开发/软件/计算机 + IT 同义</td><td>标记 425 条核心集（体制内全量 150 + 市场化相关性 Top275）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="value-note reveal" style="margin-top:20px">
+      <b>清洗要点：</b>真实数据最大的挑战不在"写代码"，而在<b>多源字段对齐</b>——体制内岗的学历是权威门槛、薪资按政策"未公开"；市场化岗薪资是数值、但学历要反推。两套口径不能混着直接统计，必须先分列、再归一、最后按「数据来源」分层分析。这套"先分后合、口径分层"的思路，正是上面代码里 <code style="color:var(--cyan)">fmt_salary</code> 与 <code style="color:var(--cyan)">derive_edu</code> 两套逻辑并存的原因。
+    </div>
+  </section>
+
+  <!-- 04 可视化看板 -->
+  <section class="section" id="dashboard">
+    <div class="section-head reveal">
+      <span class="section-tag">INTERACTIVE DASHBOARD</span>
+      <h2 class="section-title">可视化 <span class="accent">看板</span></h2>
+      <p class="section-desc">基于核心分析集（425 条）真实聚合，使用 ECharts 深度定制暗黑主题，支持悬浮联动。</p>
+    </div>
+    <div class="chart-grid">
+      <div class="chart-card reveal">
+        <div class="ctitle">学历门槛分布</div>
+        <div class="csub">核心集 425 条岗位 · 学历要求归一化</div>
+        <div id="chart-edu" class="echart"></div>
+        <div class="insight"><b>读图：</b>体制内岗位学历要求为本科 90 / 硕士 39 / 不限 21，<b>0 个"大专"硬门槛</b>；市场化岗位为本科 45 / 大专 28 / 硕士 2 / 不限 2。<br/>
+        <b>关键洞察：</b>体制内专科入口全靠 21 个"不限"岗，而企业端明确给出 28 个"大专"坑，合计约 51 条。<b>专科生求职主战场应放在企业端，体制内仅投"不限"岗碰运气。</b></div>
+      </div>
+      <div class="chart-card reveal d1">
+        <div class="ctitle">城市需求分布</div>
+        <div class="csub">成都 / 重庆主城区及各区县岗位数</div>
+        <div id="chart-city" class="echart"></div>
+        <div class="insight"><b>读图：</b>重庆全市（含各区县）归一后，<b>重庆 289 条 vs 成都 17 条，约 17 倍</b>；成都甚至不是省内第一（泸州 23 > 成都 17）。<br/>
+        <b>关键洞察：</b>成渝"双核"严重失衡，按"去重庆"直觉求职将错失 17 倍岗位池。<b>主战场选重庆（含南岸、合川、北碚等区县），成都作实习 / 保底，同步关注绵阳、泸州。</b></div>
+      </div>
+      <div class="chart-card wide reveal">
+        <div class="ctitle">技能图谱 · 高频词</div>
+        <div class="csub">从岗位名与技能要求文本中提取的词频 Top 18</div>
+        <div id="chart-skill" class="echart tall"></div>
+        <div class="insight"><b>读图：</b>高频技术栈为软件工程、计算机、网络与信息安全、电子信息、人工智能、通信等。<br/>
+        <b>关键洞察：</b>企业最看重的并非重型大数据框架，而是<b>软件 / 计算机底座 + 网络 + 电子 + 一门语言 + 数据库</b>的通用能力；网络安全和人工智能高频出现，可做差异化。<b>专科岗以应用层为主，Hadoop / Spark 等重型框架可后置。</b></div>
+      </div>
+      <div class="chart-card wide reveal">
+        <div class="ctitle">薪资分布</div>
+        <div class="csub">市场化岗位薪资下限（元/月）· 直方图 + 分位线</div>
+        <div id="chart-salary" class="echart tall"></div>
+        <div class="insight"><b>读图：</b>市场化 275 条有薪资样本，月薪下限<b>中位数 4000 元 / 月</b>，主要集中在 3k–8k 区间（另 150 条体制内为"面议 / 未公开"）。<br/>
+        <b>关键洞察：</b>川渝大数据岗起薪处于中等水平，不要被"大数据高薪"营销误导。合理预期 4k–8k；<b>议价靠可演示的项目作品 + 权威证书（1+X、软考），而非堆砌概念。</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 业务结论 -->
+  <section class="section" id="conclusion">
+    <div class="section-head reveal">
+      <span class="section-tag">INSIGHTS & LIMITS</span>
+      <h2 class="section-title">业务 <span class="accent">结论</span></h2>
+      <p class="section-desc">把数据翻译成专科生可执行的求职策略，并坦诚披露分析边界。</p>
+    </div>
+    <div class="advice">
+      <div class="a reveal"><div class="n">01</div><h4>学历 · 别死磕体制内</h4>
+        <p class="muted">体制内 0 个大专硬门槛、专科入口全靠 21 个"不限"岗；企业端明确给出 28 个"大专"坑。重心放市场化公司，体制内仅投"学历不限"岗碰运气。</p></div>
+      <div class="a reveal d1"><div class="n">02</div><h4>城市 · 主战场选重庆</h4>
+        <p class="muted">重庆核心岗位是成都的 17 倍且覆盖各区县；成都岗位少而分散（甚至少于泸州）。把重庆作主战场、成都作实习 / 保底，二线同步关注绵阳、泸州。</p></div>
+      <div class="a reveal d2"><div class="n">03</div><h4>技能 · 先打底座</h4>
+        <p class="muted">先把"一门语言（Python / Java）+ 数据库 + 网络"打牢，再往网络空间安全 / 人工智能应用两个高频方向做差异化，重型框架（Hadoop / Spark）后置。</p></div>
+      <div class="a reveal d3"><div class="n">04</div><h4>薪资 · 预期务实</h4>
+        <p class="muted">起薪中位数约 4000 元 / 月，合理预期 4k–8k。薪资议价靠可演示的项目作品 + 权威证书，而非空谈概念名词。</p></div>
+    </div>
+    <div class="value-note reveal" style="margin-top:20px">
+      <b>项目价值：</b>本项目的差异化不在"爬了多少数据"，而在<b>数据来源甄别（弃用合成集）、合规采集（不碰个人信息）、结论边界（真实层 vs 验证层）</b>的方法论自觉——这正是专科生简历最稀缺的"分析师思维"证据。
+    </div>
+    <div class="limit-box reveal">
+      <h3>⚠ 局限性披露（如实披露）</h3>
+      <ul>
+        <li><b>数据偏向体制内：</b>核心集 425 条中体制内占 150 条（约 35%），且政府岗学历字段权威但薪资未公开，导致"体制内薪资"维度缺失。</li>
+        <li><b>纯市场化薪资深度不足：</b>薪资样本来自公共招聘网，口径偏粗、且含大量基层岗，中位数 4000 低于行业感知，不能代表 BOSS / 猎聘等平台的真实市场化薪酬。</li>
+        <li><b>市场化学历标注缺失：</b>约 197 条市场化岗 JD 未明确学历（归为"其他"），学历门槛结论基于已标注子集，存在低估专科机会的可能。</li>
+        <li><b>地域与时段偏差：</b>重庆样本显著多于成都；数据为 2026 年公开在招快照，不反映季节性波动。</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="foot">川渝大数据岗位市场洞察 · 数据分析求职作品集 · 基于真实多源异构数据构建</div>
+</div>
+
+<!-- ===================== 依赖 ===================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.12.2/mermaid.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
